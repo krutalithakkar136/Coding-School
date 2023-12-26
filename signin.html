@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyMod">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style-login.css"> 
+    <script src="js/angular.min.js"></script>
+    <script src="js/login-module.js"></script>
+    <script src="js/login.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body ng-controller="mycontroller">
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign In</h1>
+            <form name="myform">
+                <div class="input-group">
+                    <!-- <div id="nameField">
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name *" name="myname" ng-model="fname" ng-minlength="3" ng-maxlength="10" required>
+                        </div>
+                        <p ng-show="myform.myname.$error.minlength" style="color:red;">Name is too small</p>
+                        <p ng-show="myform.myname.$error.maxlength" style="color:red;">Name is too big</p>
+                    </div> -->
+
+                    <div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="idemail" placeholder="Email *" ng-model="email" name="myemail" required>
+                        </div>
+                        <p ng-show="myform.myemail.$error.email" style="color:red;">Enter valid Email-id</p>
+                    </div>
+
+                    <div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="idpass" placeholder="Password *" ng-model="password" name="mypass" ng-minlength="6" required>
+                        </div>
+                        <p ng-show="myform.mypass.$error.minlength" style="color:red;">Password is too small</p>
+                    </div>
+                    <br>
+                    <div id="abc">
+                        <p>Forget Password? <a href="#">Click here!</a></p>
+                    </div>
+                </div>
+                <script src="js/jquery.min.js"></script>
+                <div id="conf">
+                    <div class="mess">Please fill below fields.</div>
+                    <br />
+                    <button class="ok">Fill</button>
+                </div>
+                <div id="confirm">
+                    <div class="message">Login Successfully.</div>
+                    <br />
+                    <button class="yes" onclick="okbtn()">Ok</button>
+                </div>
+                <div id="confirm1">
+                    <div class="message1">Invalid Email or Password.</div>
+                    <br />
+                    <button class="yes1">Ok</button>
+                </div>
+                <div class="btn-sgup">
+                    <button type="button" id="loginAcc" class="disable" onclick="loginbtn()">Login</button>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn" class="disable"><a href="login.html">Sign up</a></button>
+                    <button type="button" id="signinBtn"><a href="signin.html">Sign in</a></button>
+                </div>
+                <div class="btn-home">
+                    <button type="button" class="disable"><a href="index.html">Home</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
